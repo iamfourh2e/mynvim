@@ -48,4 +48,15 @@ return require('packer').startup(function(use)
             'stevearc/dressing.nvim', -- optional for vim.ui.select
         },
     }
+    use({ 'projekt0n/github-nvim-theme' })
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use {
+        "windwp/nvim-autopairs",
+        config = function()
+            require("nvim-autopairs").setup {
+                disable_filetype = { "TelescopePrompt", "vim" },
+            }
+        end
+    }
+    use("folke/zen-mode.nvim")
 end)
