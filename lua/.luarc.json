@@ -1,0 +1,6 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "watch_file"
+    ]
+}
