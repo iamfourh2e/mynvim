@@ -57,7 +57,7 @@ require("bufferline").setup {
         show_close_icon = true,
         show_tab_indicators = true,
         indicator = {
-            style = 'underline',
+            style = 'round',
         },
 
         hover = {
