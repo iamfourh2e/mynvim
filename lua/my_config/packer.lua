@@ -94,4 +94,14 @@ return require('packer').startup(function(use)
         }
     }
     use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+    use {
+        'nvimdev/dashboard-nvim',
+        event = 'VimEnter',
+        config = function()
+            require('dashboard').setup {
+                -- config
+            }
+        end,
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    }
 end)
