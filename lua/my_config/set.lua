@@ -22,10 +22,12 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "no"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "150"
 vim.api.nvim_set_option("clipboard", "unnamed")
+
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = "grey" })
