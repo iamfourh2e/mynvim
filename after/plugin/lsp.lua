@@ -24,15 +24,14 @@ cmp_mappings['<S-Tab>'] = nil
 lsp.setup_nvim_cmp({
     mapping = cmp_mappings
 })
---lsp.set_preferences({
---    suggest_lsp_servers = false,
---    sign_icons = {
---        Error = "",
---        Warning = "",
---        Hint = "",
---        Information = "",
---    },
---})
+lsp.set_preferences({
+    sign_icons = {
+        Error = "",
+        Warning = "",
+        Hint = "",
+        Information = "",
+    },
+})
 
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }

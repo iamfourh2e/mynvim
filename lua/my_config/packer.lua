@@ -93,7 +93,7 @@ return require('packer').startup(function(use)
             --"rcarriga/nvim-notify",
         }
     }
-    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+    --use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
     use {
         'nvimdev/dashboard-nvim',
         event = 'VimEnter',

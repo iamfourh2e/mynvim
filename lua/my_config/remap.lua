@@ -14,3 +14,9 @@ vim.keymap.set("n", "<leader>ll", "ggVG=", { silent = true })
 vim.keymap.set("n", "<leader>bd", "<cmd>:bdelete<CR>", { silent = true })
 vim.keymap.set("n", "<leader>bn", "<cmd>:bnext<CR>", { silent = true })
 vim.keymap.set("n", "<leader>bp", "<cmd>:bprevious<CR>", { silent = true })
+-- Allow clipboard copy paste in neovim
+vim.g.neovide_input_use_logo = 1
+vim.api.nvim_set_keymap('', '<D-v>', '+p<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true })
