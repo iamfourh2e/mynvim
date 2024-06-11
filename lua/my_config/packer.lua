@@ -5,16 +5,29 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
         -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } },
-        extensions = {
-            fzf = {
-                fuzzy = false,                  -- false will only do exact matching
-                override_generic_sorter = true, -- override the generic sorter
-                override_file_sorter = true,    -- override the file sorter
-                case_mode = "smart_case"        -- or "ignore_case" or "respect_case"
-                -- case_mode = "ignore_case" -- or "ignore_case" or "respect_case"
+        requires = {
+            { 'nvim-lua/plenary.nvim' },
+            { 'nvim-telescope/telescope-ui-select.nvim' },
+            { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+        },
+        config = function()
+            require('telescope').setup {
+                defaults = {
+                    mappings = {
+                        i = {
+                            ["<C-j>"] = require('telescope.actions').move_selection_next,
+                            ["<C-k>"] = require('telescope.actions').move_selection_previous,
+                        },
+                    },
+                },
+                extensions = {
+                    fzf = {
+                        override_generic_sorter = false, -- override the generic sorter
+                        override_file_sorter = true,     -- override the file sorter
+                    },
+                },
             }
-        }
+        end,
     }
 
     use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })

@@ -31,6 +31,7 @@ lsp.set_preferences({
         Hint = "",
         Information = "",
     },
+
 })
 
 lsp.on_attach(function(client, bufnr)
