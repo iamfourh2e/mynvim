@@ -2,6 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+    use { 'sago35/tinygo.vim' }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
         -- or                            , branch = '0.1.x',
@@ -58,6 +59,13 @@ return require('packer').startup(function(use)
     }
     }
     use { "ellisonleao/gruvbox.nvim" }
+    use { "catppuccin/nvim", as = "catppuccin" }
+    use {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -98,7 +106,6 @@ return require('packer').startup(function(use)
         end
     }
     use("folke/zen-mode.nvim")
-    use('echasnovski/mini.animate')
     --   use "lukas-reineke/indent-blankline.nvim"
     use { 'echasnovski/mini.nvim', branch = 'stable' }
     use
@@ -116,7 +123,7 @@ return require('packer').startup(function(use)
             --"rcarriga/nvim-notify",
         }
     }
-    --use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
     use {
         'nvimdev/dashboard-nvim',
         event = 'VimEnter',
