@@ -1,25 +1,22 @@
 function SetLineColor()
     vim.api.nvim_set_hl(0, "WinSeparator", { fg = "grey" })
     vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = 'gray', bold = false })
-    vim.api.nvim_set_hl(0, 'LineNr', { fg = '#f6e71d', bold = true })
+    vim.api.nvim_set_hl(0, 'LineNr', { fg = '#C0C309', bold = true })
     vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = 'gray', bold = false })
 end
 
 function LightColor(color, mode)
     --   c = color or "catppuccin"
-    vim.cmd.colorscheme "catppuccin"
-    --  vim.o.background = "dark"
+    vim.cmd.colorscheme "gruvbox"
+    vim.o.background = "light"
     --  vim.cmd.colorscheme(c)
-    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
 function DarkColor(color)
-    c = color or "gruvbox"
+    vim.cmd.colorscheme "catppuccin"
     vim.o.background = "dark" -- or "light" for light mode
-    vim.cmd.colorscheme(c)
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
 -- Helper function for transparency formatting
@@ -34,5 +31,5 @@ vim.g.neovide_background_color = "#0f1117" .. alpha()
 vim.o.guifont = "Hack Nerd Font Mono:h22" -- text below applies for VimScript
 vim.g.neovide_window_blurred = true
 
-LightColor()
+DarkColor()
 SetLineColor()

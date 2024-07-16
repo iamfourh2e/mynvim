@@ -1,6 +1,9 @@
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
+    use {
+        "rachartier/tiny-inline-diagnostic.nvim",
+    }
     use 'wbthomason/packer.nvim'
     use { 'sago35/tinygo.vim' }
     use {
@@ -137,5 +140,9 @@ return require('packer').startup(function(use)
     use {
         "kylechui/nvim-surround",
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    }
+    use {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
     }
 end)
