@@ -145,4 +145,6 @@ return require('packer').startup(function(use)
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
     }
+    use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+    end }
 end)
