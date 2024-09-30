@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "/Users/kevin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/Users/kevin/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
   ["dashboard-nvim"] = {
     config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14dashboard\frequire\0" },
     loaded = false,
@@ -213,6 +208,12 @@ _G.packer_plugins = {
     path = "/Users/kevin/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["supermaven-nvim"] = {
+    config = { "\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20supermaven-nvim\frequire\0" },
+    loaded = true,
+    path = "/Users/kevin/.local/share/nvim/site/pack/packer/start/supermaven-nvim",
+    url = "https://github.com/supermaven-inc/supermaven-nvim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/kevin/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -224,7 +225,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
   },
   ["telescope.nvim"] = {
-    config = { "\27LJ\2\nï\2\0\0\t\0\19\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\r\0005\3\v\0005\4\t\0005\5\5\0006\6\0\0'\b\3\0B\6\2\0029\6\4\6=\6\6\0056\6\0\0'\b\3\0B\6\2\0029\6\a\6=\6\b\5=\5\n\4=\4\f\3=\3\14\0025\3\16\0005\4\15\0=\4\17\3=\3\18\2B\0\2\1K\0\1\0\15extensions\bfzf\1\0\1\bfzf\0\1\0\2\25override_file_sorter\2\28override_generic_sorter\1\rdefaults\1\0\2\rdefaults\0\15extensions\0\rmappings\1\0\1\rmappings\0\6i\1\0\1\6i\0\n<C-k>\28move_selection_previous\n<C-j>\1\0\2\n<C-j>\0\n<C-k>\0\24move_selection_next\22telescope.actions\nsetup\14telescope\frequire\0" },
+    config = { "\27LJ\2\nï\2\0\0\t\0\19\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\r\0005\3\v\0005\4\t\0005\5\5\0006\6\0\0'\b\3\0B\6\2\0029\6\4\6=\6\6\0056\6\0\0'\b\3\0B\6\2\0029\6\a\6=\6\b\5=\5\n\4=\4\f\3=\3\14\0025\3\16\0005\4\15\0=\4\17\3=\3\18\2B\0\2\1K\0\1\0\15extensions\bfzf\1\0\1\bfzf\0\1\0\2\28override_generic_sorter\1\25override_file_sorter\2\rdefaults\1\0\2\15extensions\0\rdefaults\0\rmappings\1\0\1\rmappings\0\6i\1\0\1\6i\0\n<C-k>\28move_selection_previous\n<C-j>\1\0\2\n<C-k>\0\n<C-j>\0\24move_selection_next\22telescope.actions\nsetup\14telescope\frequire\0" },
     loaded = true,
     path = "/Users/kevin/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
@@ -245,7 +246,7 @@ _G.packer_plugins = {
     url = "https://github.com/folke/todo-comments.nvim"
   },
   ["toggleterm.nvim"] = {
-    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0" },
+    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     path = "/Users/kevin/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
@@ -274,6 +275,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n†\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\21disable_filetype\1\0\1\21disable_filetype\0\1\3\0\0\20TelescopePrompt\bvim\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
@@ -284,12 +289,12 @@ try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\
 time([[Config for which-key.nvim]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\nï\2\0\0\t\0\19\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\r\0005\3\v\0005\4\t\0005\5\5\0006\6\0\0'\b\3\0B\6\2\0029\6\4\6=\6\6\0056\6\0\0'\b\3\0B\6\2\0029\6\a\6=\6\b\5=\5\n\4=\4\f\3=\3\14\0025\3\16\0005\4\15\0=\4\17\3=\3\18\2B\0\2\1K\0\1\0\15extensions\bfzf\1\0\1\bfzf\0\1\0\2\25override_file_sorter\2\28override_generic_sorter\1\rdefaults\1\0\2\rdefaults\0\15extensions\0\rmappings\1\0\1\rmappings\0\6i\1\0\1\6i\0\n<C-k>\28move_selection_previous\n<C-j>\1\0\2\n<C-j>\0\n<C-k>\0\24move_selection_next\22telescope.actions\nsetup\14telescope\frequire\0", "config", "telescope.nvim")
+try_loadstring("\27LJ\2\nï\2\0\0\t\0\19\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\r\0005\3\v\0005\4\t\0005\5\5\0006\6\0\0'\b\3\0B\6\2\0029\6\4\6=\6\6\0056\6\0\0'\b\3\0B\6\2\0029\6\a\6=\6\b\5=\5\n\4=\4\f\3=\3\14\0025\3\16\0005\4\15\0=\4\17\3=\3\18\2B\0\2\1K\0\1\0\15extensions\bfzf\1\0\1\bfzf\0\1\0\2\28override_generic_sorter\1\25override_file_sorter\2\rdefaults\1\0\2\15extensions\0\rdefaults\0\rmappings\1\0\1\rmappings\0\6i\1\0\1\6i\0\n<C-k>\28move_selection_previous\n<C-j>\1\0\2\n<C-k>\0\n<C-j>\0\24move_selection_next\22telescope.actions\nsetup\14telescope\frequire\0", "config", "telescope.nvim")
 time([[Config for telescope.nvim]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
-time([[Config for toggleterm.nvim]], false)
+-- Config for: supermaven-nvim
+time([[Config for supermaven-nvim]], true)
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20supermaven-nvim\frequire\0", "config", "supermaven-nvim")
+time([[Config for supermaven-nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

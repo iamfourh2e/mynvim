@@ -1,4 +1,7 @@
 require("toggleterm").setup({
+    {
+        shade_terminals = false,
+    }
 })
 
 vim.keymap.set("t", "\\", "<cmd>ToggleTerm direction=float<CR>", {})

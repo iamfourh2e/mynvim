@@ -90,7 +90,13 @@ return require('packer').startup(function(use)
             }
         end
     }
-    use("github/copilot.vim")
+    --use("github/copilot.vim")
+    use {
+        "supermaven-inc/supermaven-nvim",
+        config = function()
+            require("supermaven-nvim").setup({})
+        end,
+    }
     use {
         'akinsho/flutter-tools.nvim',
         requires = {

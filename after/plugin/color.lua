@@ -6,10 +6,10 @@ function SetLineColor()
 end
 
 function LightColor(color, mode)
-    --   c = color or "catppuccin"
-    vim.cmd.colorscheme "gruvbox"
+    c = color or "gruvbox"
+    --vim.cmd.colorscheme "gruvbox"
     vim.o.background = "light"
-    --  vim.cmd.colorscheme(c)
+    vim.cmd.colorscheme(c)
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
