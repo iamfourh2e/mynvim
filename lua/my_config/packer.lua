@@ -3,6 +3,10 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use {
         "rachartier/tiny-inline-diagnostic.nvim",
+
+    }
+    use {
+        "rachartier/tiny-inline-diagnostic.nvim",
     }
     use 'wbthomason/packer.nvim'
     use { 'sago35/tinygo.vim' }
@@ -32,6 +36,9 @@ return require('packer').startup(function(use)
                     fzf = {
                         override_generic_sorter = false, -- override the generic sorter
                         override_file_sorter = true,     -- override the file sorter
+                    },
+                    flutter = {
+                        use_test = true,
                     },
                 },
             }
