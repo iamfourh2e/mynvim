@@ -7,8 +7,9 @@ end
 
 function LightColor(color, mode)
     c = color or "gruvbox"
-    --vim.cmd.colorscheme "gruvbox"
-    vim.o.background = "light"
+    --    vim.cmd.colorscheme "gruvbox"
+    m = mode or "dark"
+    vim.o.background = m
     vim.cmd.colorscheme(c)
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -31,5 +32,5 @@ vim.g.neovide_background_color = "#0f1117" .. alpha()
 vim.o.guifont = "Hack Nerd Font Mono:h22" -- text below applies for VimScript
 vim.g.neovide_window_blurred = true
 
-DarkColor()
+LightColor()
 SetLineColor()

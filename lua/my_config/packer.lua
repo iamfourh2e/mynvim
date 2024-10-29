@@ -23,6 +23,10 @@ return require('packer').startup(function(use)
                             ["<C-k>"] = require('telescope.actions').move_selection_previous,
                         },
                     },
+                    layout_config = {
+                        vertical = { width = 0.8 }
+                        -- other layout configuration here
+                    },
                 },
                 extensions = {
                     fzf = {
@@ -115,7 +119,7 @@ return require('packer').startup(function(use)
         end
     }
     use("folke/zen-mode.nvim")
-    --   use "lukas-reineke/indent-blankline.nvim"
+    use "lukas-reineke/indent-blankline.nvim"
     use { 'echasnovski/mini.nvim', branch = 'stable' }
     use
     {
