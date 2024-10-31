@@ -126,7 +126,10 @@ return require('packer').startup(function(use)
         end
     }
     use("folke/zen-mode.nvim")
-    use "lukas-reineke/indent-blankline.nvim"
+    use { "lukas-reineke/indent-blankline.nvim",
+
+
+    }
     use { 'echasnovski/mini.nvim', branch = 'stable' }
     use
     {
@@ -149,7 +152,8 @@ return require('packer').startup(function(use)
         event = 'VimEnter',
         config = function()
             require('dashboard').setup {
-                -- config
+                theme = 'hyper' --  theme is doom and hyper default is doom
+
             }
         end,
         requires = { 'nvim-tree/nvim-web-devicons' }

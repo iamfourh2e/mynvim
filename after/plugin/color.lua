@@ -8,7 +8,7 @@ end
 function LightColor(color, mode)
     c = color or "gruvbox"
     --    vim.cmd.colorscheme "gruvbox"
-    m = mode or "dark"
+    m = mode or "light"
     vim.o.background = m
     vim.cmd.colorscheme(c)
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -16,8 +16,14 @@ function LightColor(color, mode)
 end
 
 function DarkColor(color)
-    vim.cmd.colorscheme "catppuccin"
-    vim.o.background = "dark" -- or "light" for light mode
+    c = color or "catppuccin"
+    --    vim.cmd.colorscheme "gruvbox"
+    m = mode or "dark"
+    vim.o.background = m
+    vim.cmd.colorscheme(c)
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    --transaprency
 end
 
 -- Helper function for transparency formatting
@@ -32,5 +38,5 @@ vim.g.neovide_background_color = "#0f1117" .. alpha()
 vim.o.guifont = "Hack Nerd Font Mono:h22" -- text below applies for VimScript
 vim.g.neovide_window_blurred = true
 
-LightColor()
+DarkColor()
 SetLineColor()
