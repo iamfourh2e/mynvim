@@ -1,6 +1,13 @@
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
+    use({
+        "CopilotC-Nvim/CopilotChat.nvim",
+        dependencies = {
+            { "github/copilot.vim" },    -- or zbirenbaum/copilot.lua
+            { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+        },
+    })
     use {
         "rachartier/tiny-inline-diagnostic.nvim",
 
@@ -166,6 +173,25 @@ return require('packer').startup(function(use)
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
     }
+    use {
+        "CopilotC-Nvim/CopilotChat.nvim",
+        requires = {
+            { "github/copilot.vim" },    -- or zbirenbaum/copilot.lua
+            { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+        },
+        config = function()
+            require("CopilotChat").setup {
+                show_help = "yes",         -- Show help text for CopilotChatInPlace, default: yes
+                debug = false,             -- Enable or disable debug mode, the log file will be in ~/.local/state/nvim/CopilotChat.nvim.log
+                disable_extra_info = 'no', -- Disable extra information (e.g: system prompt) in the response.
+                language = "English"       -- Copilot answer language settings when using default prompts. Default language is English.
+                -- proxy = "socks5://127.0.0.1:3000", -- Proxies requests via https or socks.
+                -- temperature = 0.1,
+            }
+        end,
+    }
+
     use { "akinsho/toggleterm.nvim", tag = '*', config = function()
-    end }
+    end
+    }
 end)
